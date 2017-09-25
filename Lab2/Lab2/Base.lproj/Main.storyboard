@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Lab2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="18" minValue="8" maxValue="28" translatesAutoresizingMaskIntoConstraints="NO" id="hyX-Kd-aaA">
+                                <rect key="frame" x="93" y="370" width="228" height="31"/>
+                                <connections>
+                                    <action selector="changeFontSize:" destination="BYZ-38-t0r" eventType="valueChanged" id="UUI-pw-aAS"/>
+                                </connections>
+                            </slider>
+                            <segmentedControl opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SX3-dS-as2">
+                                <rect key="frame" x="120" y="295" width="174" height="29"/>
+                                <segments>
+                                    <segment title="Pichu"/>
+                                    <segment title="Pikachu"/>
+                                    <segment title="Raichu"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeImage:" destination="BYZ-38-t0r" eventType="valueChanged" id="BLs-0x-kL5"/>
+                                </connections>
+                            </segmentedControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pichu" translatesAutoresizingMaskIntoConstraints="NO" id="c74-AU-aB2">
+                                <rect key="frame" x="100" y="120" width="214" height="83"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokémon Evolution" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nwa-s0-Ekj">
+                                <rect key="frame" x="70" y="29.999999999999996" width="274" height="21.666666666666661"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4s4-zC-l9P">
+                                <rect key="frame" x="180" y="420" width="56" height="31"/>
+                                <connections>
+                                    <action selector="backgroundSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="VA3-3Z-SGk"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="SX3-dS-as2" secondAttribute="trailing" constant="77.5" id="5OP-0z-bL0">
+                                <variation key="widthClass=compact" constant="100"/>
+                                <variation key="widthClass=regular" constant="400"/>
+                            </constraint>
+                            <constraint firstItem="SX3-dS-as2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="250" id="8aO-zw-CTA">
+                                <variation key="widthClass=compact" constant="275"/>
+                                <variation key="widthClass=regular" constant="100"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="hyX-Kd-aaA" secondAttribute="trailing" constant="92.5" id="Fjl-ba-m7b">
+                                <variation key="widthClass=compact" constant="75"/>
+                                <variation key="widthClass=regular" constant="400"/>
+                            </constraint>
+                            <constraint firstItem="SX3-dS-as2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="77.5" id="FwT-Qv-qMm">
+                                <variation key="widthClass=compact" constant="100"/>
+                            </constraint>
+                            <constraint firstItem="c74-AU-aB2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="90" id="GEx-jv-pmF">
+                                <variation key="widthClass=compact" constant="100"/>
+                                <variation key="widthClass=regular" constant="120"/>
+                            </constraint>
+                            <constraint firstItem="4s4-zC-l9P" firstAttribute="leading" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="162" id="LKg-2Z-uWF">
+                                <variation key="widthClass=compact" constant="160"/>
+                            </constraint>
+                            <constraint firstItem="Nwa-s0-Ekj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="U7A-2W-rSd"/>
+                            <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="4s4-zC-l9P" secondAttribute="trailing" constant="162" id="VcK-se-hda">
+                                <variation key="widthClass=compact" constant="160"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="c74-AU-aB2" secondAttribute="trailing" constant="100" id="d9U-Mo-mu8">
+                                <variation key="widthClass=compact" constant="80"/>
+                                <variation key="widthClass=regular" constant="30"/>
+                            </constraint>
+                            <constraint firstItem="4s4-zC-l9P" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="350" id="hMy-oS-AlX">
+                                <variation key="widthClass=compact" constant="400"/>
+                                <variation key="widthClass=regular" constant="225"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="Nwa-s0-Ekj" secondAttribute="trailing" constant="30" id="ihX-Na-28R">
+                                <variation key="widthClass=compact" constant="50"/>
+                                <variation key="widthClass=regular" constant="350"/>
+                            </constraint>
+                            <constraint firstItem="c74-AU-aB2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="pDd-Wf-g0b">
+                                <variation key="widthClass=compact" constant="80"/>
+                                <variation key="widthClass=regular" constant="400"/>
+                            </constraint>
+                            <constraint firstItem="hyX-Kd-aaA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="92.5" id="qZI-3f-y6w">
+                                <variation key="widthClass=compact" constant="75"/>
+                                <variation key="widthClass=regular" constant="80"/>
+                            </constraint>
+                            <constraint firstItem="hyX-Kd-aaA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="300" id="vB5-iJ-v19">
+                                <variation key="widthClass=compact" constant="350"/>
+                                <variation key="widthClass=regular" constant="170"/>
+                            </constraint>
+                            <constraint firstItem="Nwa-s0-Ekj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="yUR-d4-Hbc">
+                                <variation key="widthClass=compact" constant="50"/>
+                            </constraint>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundColor" destination="8bC-Xf-vdC" id="eWz-ce-hEP"/>
+                        <outlet property="backgroundColorSwitch" destination="4s4-zC-l9P" id="MeA-nV-ink"/>
+                        <outlet property="fontSizeLabel" destination="Nwa-s0-Ekj" id="FKe-Ho-yXo"/>
+                        <outlet property="imageControl" destination="SX3-dS-as2" id="lHp-G7-UYZ"/>
+                        <outlet property="mainImage" destination="c74-AU-aB2" id="qpE-bM-7ty"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="135.38230884557723"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Pichu" width="83" height="83"/>
+    </resources>
+</document>
