@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Lab5</string>
+    <string name="clickMe">Click Me</string>
+    <string name="name">Name</string>
+    <string name="switch1">Bold Text</string>
+    <string name="labelOff">Off</string>
+    <string name="labelOn">On</string>
+    <string name="radioButton1">Green</string>
+    <string name="radioButton2">Blue</string>
+    <string name="radioButton3">Red</string>
+    <string name="checkBox">Make it Awesome!</string>
+    <string-array name="characters">
+        <item>Fry</item>
+        <item>Leela</item>
+        <item>Professor</item>
+        <item>Bender</item>
+        <item>Zoidberg</item>
+    </string-array>
+</resources>
